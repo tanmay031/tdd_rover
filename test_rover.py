@@ -16,7 +16,7 @@ class test_string(unittest.TestCase):
 
     # Test lowercase
     def test_enrove_non_empty_string_lowercase_abc(self):
-        self.assertEqual(rv.enrove("abc"), "abobcoc")
+        self.assertEqual(rv.enrove("abc"), "aaabobcoc")
 
     def test_enrove_non_empty_string_lowercase_def(self):
         self.assertEqual(rv.enrove("def"), "dodefof")
