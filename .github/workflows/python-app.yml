@@ -1,5 +1,4 @@
-# .github/workflows/python-app.yml
-name: Python Application CI
+name: Python CI
 
 on: [push, pull_request]
 
@@ -20,12 +19,12 @@ jobs:
       run: |
         pip install pytest pytest-cov
 
-    - name: Run tests and collect coverage
+    - name: Run tests with coverage
       run: |
         pytest --cov=Rover --cov-report=html
 
-    - name: Upload coverage report
+    - name: Upload HTML coverage report
       uses: actions/upload-artifact@v3
       with:
-        name: coverage-report
-        path: coverage.xml
+        name: coverage-html-report
+        path: htmlcov/
